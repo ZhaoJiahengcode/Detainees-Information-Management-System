@@ -8,7 +8,7 @@
 
 1. 克隆仓库
 ```
-git clone https://github.com/yourusername/prison_system.git
+git clone https://github.com/yourusername/Detainees-Information-Management-System.git
 cd prison_system
 ```
 2. 创建虚拟环境并安装依赖
@@ -27,7 +27,3 @@ flask run
 ## 默认演示账号
 - 用户名: officer1
 - 密码: 123456
-
-## 项目结构
-```
-(prison_system目录结构参见项目根目录说明)
