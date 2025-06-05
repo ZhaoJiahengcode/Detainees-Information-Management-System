@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>在押名单</h2>
+<table>
+    <tr><th>编号</th><th>姓名</th><th>罪名</th><th>监区</th><th>操作</th></tr>
+    {% for p in inmates %}
+    <tr {% if p.prisoner_id == highlight %}class="highlight"{% endif %}>
+        <td>{{ p.prisoner_id }}</td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.crime }}</td>
+        <td>{{ p.block }}</td>
+        <td><a href="/release/{{ p.id }}">释放</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

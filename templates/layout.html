@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/style.css">
+  <title>Prison System</title>
+</head>
+
+<body>
+  <nav>
+    <!-- 把 'xxx'|url_for 改为 url_for('xxx') -->
+    <a href="{{ url_for('prisoner.register') }}">收押登记</a> |
+    <a href="{{ url_for('prisoner.inmates') }}">在押名单</a> |
+    <a href="{{ url_for('auth.logout') }}">登出</a>
+  </nav>
+  <div class="container">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flashes">
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </div>
+</body>
+
+</html>

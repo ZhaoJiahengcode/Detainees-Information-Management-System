@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>释放证明</title></head>
+<body>
+    <h1>释放证明</h1>
+    <p>编号: {{ prisoner.prisoner_id }}</p>
+    <p>姓名: {{ prisoner.name }}</p>
+    <p>释放类型: {{ prisoner.release_type }}</p>
+    <p>释放日期: {{ prisoner.date_out.strftime('%Y-%m-%d') }}</p>
+</body>
+</html>

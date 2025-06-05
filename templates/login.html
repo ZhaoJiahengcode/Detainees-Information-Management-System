@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="login-container">
+    <h2>狱警登录</h2>
+    <form method="post">
+        <label>
+            用户名:
+            <input type="text" name="username" placeholder="请输入用户名" required>
+        </label>
+        <label>
+            密码:
+            <input type="password" name="password" placeholder="请输入密码" required>
+        </label>
+        <button type="submit">登录</button>
+    </form>
+</div>
+{% endblock %}

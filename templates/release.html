@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>释放: {{ prisoner.name }} ({{ prisoner.prisoner_id }})</h2>
+<form method="post">
+    <label>释放类型:
+        <select name="type">
+            <option value="刑满释放">刑满释放</option>
+            <option value="假释">假释</option>
+            <option value="其他">其他</option>
+        </select>
+    </label><br>
+    <button type="submit">生成释放证明</button>
+</form>
+{% endblock %}
